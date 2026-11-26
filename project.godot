@@ -1,0 +1,32 @@
+config_version=5
+
+[application]
+config/name="FrameGauge — Demo"
+config/icon="res://addons/pft_benchmark/icon.svg"
+run/main_scene="res://demo/scene_3d.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+PFTBenchmark="*res://addons/pft_benchmark/runtime.gd"
+
+[display]
+window/size/viewport_width=1100
+window/size/viewport_height=700
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+enabled=PackedStringArray("res://addons/pft_benchmark/plugin.cfg")
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[pft_benchmark]
+
+measure_render_time=true
+mode=1
+editor_telemetry=true
+
+scale=0.8
+opacity=0.85
+hud_opacity=1.0
